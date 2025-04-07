@@ -94,60 +94,36 @@ class GAD7PDF(FPDF):
 def gerar_mensagem(pontuacao):
     if pontuacao <= 4:
         nivel = "Ansiedade mínima"
-        mensagem = (
-            "Sua pontuação está dentro da faixa considerada normal. Isso indica que, neste momento, seus níveis de ansiedade estão sob controle.
+        mensagem = """Sua pontuação está dentro da faixa considerada normal. Isso indica que, neste momento, seus níveis de ansiedade estão sob controle.
 
-"
-            "Recomendações:
-"
-            "- Continue investindo em momentos de descanso e lazer;
-"
-            "- Mantenha rotinas que te façam bem;
-"
-            "- Exercício sugerido: Escreva 3 coisas que funcionam bem na sua vida emocional atualmente."
-        )
+Recomendações:
+- Continue investindo em momentos de descanso e lazer;
+- Mantenha rotinas que te façam bem;
+- Exercício sugerido: Escreva 3 coisas que funcionam bem na sua vida emocional atualmente."""
     elif pontuacao <= 9:
         nivel = "Ansiedade leve"
-        mensagem = (
-            "Você apresenta alguns sinais leves de ansiedade. Isso é comum e pode estar relacionado a situações do dia a dia. Ainda assim, é importante observar se esses sintomas estão se repetindo com frequência.
+        mensagem = """Você apresenta alguns sinais leves de ansiedade. Isso é comum e pode estar relacionado a situações do dia a dia. Ainda assim, é importante observar se esses sintomas estão se repetindo com frequência.
 
-"
-            "Recomendações:
-"
-            "- Perceba gatilhos que aumentam sua ansiedade;
-"
-            "- Pratique respiração ou meditação curta;
-"
-            "- Exercício sugerido: Escreva o que te causa ansiedade e uma resposta possível para cada ponto."
-        )
+Recomendações:
+- Perceba gatilhos que aumentam sua ansiedade;
+- Pratique respiração ou meditação curta;
+- Exercício sugerido: Escreva o que te causa ansiedade e uma resposta possível para cada ponto."""
     elif pontuacao <= 14:
         nivel = "Ansiedade moderada"
-        mensagem = (
-            "Essa pontuação indica que você está sentindo impactos mais significativos da ansiedade na sua rotina.
+        mensagem = """Essa pontuação indica que você está sentindo impactos mais significativos da ansiedade na sua rotina.
 
-"
-            "Recomendações:
-"
-            "- Converse com um(a) psicólogo(a) para compreender os gatilhos;
-"
-            "- Técnicas de respiração e auto-observação podem ser úteis;
-"
-            "- Exercício sugerido: Registre por 3 dias seguidos os momentos em que sentiu ansiedade."
-        )
+Recomendações:
+- Converse com um(a) psicólogo(a) para compreender os gatilhos;
+- Técnicas de respiração e auto-observação podem ser úteis;
+- Exercício sugerido: Registre por 3 dias seguidos os momentos em que sentiu ansiedade."""
     else:
         nivel = "Ansiedade elevada"
-        mensagem = (
-            "Sua pontuação mostra que os sintomas estão intensos e podem estar afetando sua qualidade de vida emocional, física e social.
+        mensagem = """Sua pontuação mostra que os sintomas estão intensos e podem estar afetando sua qualidade de vida emocional, física e social.
 
-"
-            "Recomendações:
-"
-            "- Inicie acompanhamento psicológico se ainda não estiver;
-"
-            "- Evite autocrítica e acolha seus sentimentos;
-"
-            "- Exercício sugerido: Liste 5 preocupações da semana e reflita: posso controlar? posso aceitar? posso pedir ajuda?"
-        )
+Recomendações:
+- Inicie acompanhamento psicológico se ainda não estiver;
+- Evite autocrítica e acolha seus sentimentos;
+- Exercício sugerido: Liste 5 preocupações da semana e reflita: posso controlar? posso aceitar? posso pedir ajuda?"""
     return nivel, mensagem
 
 # --- RESULTADO E PDF ---
